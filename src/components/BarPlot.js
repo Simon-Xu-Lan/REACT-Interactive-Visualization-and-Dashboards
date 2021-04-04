@@ -23,8 +23,8 @@ function BarPlot(props) {
       yaxis: { title: 'OTU ID' },
       xaxis: { title: 'Sample Value' },
       showlegend: false,
-      height: 500,
-      width: 300,
+      //   height: 500,
+      //   width: 300,
     };
     Plotly.newPlot('bar', data, layout);
   }
