@@ -1,8 +1,10 @@
-# Getting Started with Create React App
+# Component Tree
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Component Tree
+
+<img src="images/React-Plotly.png" width="800" alt="Component tree"/>
 
 In the project directory, you can run:
 

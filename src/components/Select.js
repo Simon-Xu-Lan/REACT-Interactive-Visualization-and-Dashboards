@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Select(props) {
-  console.log(props.sample);
   return (
     <div class="well">
       <h5>Test Subject ID No.:</h5>

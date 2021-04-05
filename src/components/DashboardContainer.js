@@ -10,6 +10,7 @@ import BubblePlot from './BubblePlot';
 import GaugePlot from './GaugePlot';
 import DemoInfo from './DemoInfo';
 import data from '../data/samples';
+// import TestPlot from './TestPlot';
 // import axios from 'axios';
 // import Plotly from 'plotly.js';
 
@@ -102,6 +103,11 @@ class DashboardContainer extends React.Component {
             <BubblePlot sample={this.state.selectedSample} />
           </Col>
         </Row>
+        {/* <Row>
+          <Col size="md-12">
+            <TestPlot />
+          </Col>
+        </Row> */}
       </Container>
     );
   }
