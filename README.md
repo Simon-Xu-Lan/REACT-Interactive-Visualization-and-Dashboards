@@ -28,4 +28,17 @@ The webpage is published at "https://simon-xu-lan.github.io/REACT-Interactive-Vi
   - else, generate plot based on data
 - React has build logic to check the state change and re-render the state data related components
 - Plotly.newPlot method must has the related <div> with id mounted first, otherwise the plot won't be build.
+
   - The state data is empty When React in the first mounting stage, so React just mount HTML frame to later use.
+
+- Use local data file such as "samples.json"
+  - Make sure use the server path not filesystem path
+    - Put the data file under public folder
+    - Use the server path "/samples.json"
+    - Don't use the file system path: "samples.json"
+  - However, the above solution works well under development mode/local computer. it doesn't work after it was deployed to github.
+
+# Question
+
+- Why does the data file not work?
+- Why API path not work?
