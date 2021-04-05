@@ -9,6 +9,8 @@ import BarPlot from './BarPlot';
 import BubblePlot from './BubblePlot';
 import GaugePlot from './GaugePlot';
 import DemoInfo from './DemoInfo';
+import data from '../data/samples';
+// import axios from 'axios';
 // import Plotly from 'plotly.js';
 
 class DashboardContainer extends React.Component {
@@ -21,7 +23,7 @@ class DashboardContainer extends React.Component {
   };
 
   componentDidMount() {
-    this.searchSamples('940');
+    this.processSamples('940');
     console.log('did', this.state.metadata);
   }
 
@@ -31,7 +33,11 @@ class DashboardContainer extends React.Component {
     // So make sure the file is served by the server, give it a server path, not a filesystem path
     // Put the file in the public folder and use the path "/samples.json", instead of "samples.json" which is filesystem path
     // Or put the file in public/data folder and use the path"/data/samples.json"
-    d3.json('https://belly-biodiversity-samples.herokuapp.com/api/samples')
+    // const URL = 'https://belly-biodiversity-samples.herokuapp.com/api/samples';
+    // d3.json('https://belly-biodiversity-samples.herokuapp.com/api/samples')
+    // axios
+    //   .get(URL)
+    d3.json('../data/samples.json')
       .then((data) => {
         let selectedSample = data.samples.filter((d) => d.id === query);
         let metadata = data.metadata.filter((d) => d.id === parseInt(query));
@@ -47,11 +53,24 @@ class DashboardContainer extends React.Component {
       .catch((error) => console.log(error));
   };
 
+  processSamples = (query) => {
+    let selectedSample = data.samples.filter((d) => d.id === query);
+    let metadata = data.metadata.filter((d) => d.id === parseInt(query));
+    let wfreq = metadata[0].wfreq;
+    let names = data.names;
+    this.setState({
+      selectedSample: selectedSample,
+      metadata: metadata[0],
+      wfreq: wfreq,
+      names: names,
+    });
+  };
+
   handleSelectChange = (event) => {
     this.setState({
       selectId: event.target.value,
     });
-    this.searchSamples(event.target.value);
+    this.processSamples(event.target.value);
   };
 
   render() {
