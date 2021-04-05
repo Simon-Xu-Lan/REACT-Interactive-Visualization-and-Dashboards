@@ -1,6 +1,8 @@
-# Component Tree
+# Project introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project React, Plotly.js, Bootstrap to build a dashborad webpage
+The webpage is published at "https://simon-xu-lan.github.io/REACT-Interactive-Visualization-and-Dashboards/"
+<<img src="images/page.png" width="800" alt="webpage"/>
 
 ## Component Tree
 
