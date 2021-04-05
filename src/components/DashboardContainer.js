@@ -31,7 +31,7 @@ class DashboardContainer extends React.Component {
     // So make sure the file is served by the server, give it a server path, not a filesystem path
     // Put the file in the public folder and use the path "/samples.json", instead of "samples.json" which is filesystem path
     // Or put the file in public/data folder and use the path"/data/samples.json"
-    d3.json('/data/samples.json')
+    d3.json('https://belly-biodiversity-samples.herokuapp.com/api/samples')
       .then((data) => {
         let selectedSample = data.samples.filter((d) => d.id === query);
         let metadata = data.metadata.filter((d) => d.id === parseInt(query));
