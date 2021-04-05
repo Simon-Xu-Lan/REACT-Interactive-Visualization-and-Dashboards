@@ -20,3 +20,12 @@ The webpage is published at "https://simon-xu-lan.github.io/REACT-Interactive-Vi
 ## 2. Flow Chart
 
 <img src="images/React-Plotly-FlowChart.png" width="1000" alt="Component tree"/>
+
+# What I learned
+
+- When use data in component, make sure to check if the data is empty or not, otherwise error pop up
+  - if data is empty, mount HTML frame only
+  - else, generate plot based on data
+- React has build logic to check the state change and re-render the state data related components
+- Plotly.newPlot method must has the related <div> with id mounted first, otherwise the plot won't be build.
+  - The state data is empty When React in the first mounting stage, so React just mount HTML frame to later use.
