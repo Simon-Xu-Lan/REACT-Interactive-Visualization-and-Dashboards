@@ -3,7 +3,7 @@
 This project React, Plotly.js, Bootstrap to build a dashborad webpage
 The webpage is published at "https://simon-xu-lan.github.io/REACT-Interactive-Visualization-and-Dashboards/"
 
-<img src="images/page.png" width="1000" alt="webpage"/>
+<img src="images/webpage.png" width="1000" alt="webpage"/>
 
 # Code structure
 
