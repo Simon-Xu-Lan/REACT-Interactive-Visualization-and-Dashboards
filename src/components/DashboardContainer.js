@@ -38,7 +38,8 @@ class DashboardContainer extends React.Component {
     // d3.json('https://belly-biodiversity-samples.herokuapp.com/api/samples')
     // axios
     //   .get(URL)
-    d3.json('../data/samples.json')
+    // d3.json('../data/samples.json')
+    d3.json('https://belly-biodiversity-samples.herokuapp.com/api/samples')
       .then((data) => {
         let selectedSample = data.samples.filter((d) => d.id === query);
         let metadata = data.metadata.filter((d) => d.id === parseInt(query));

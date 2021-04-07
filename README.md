@@ -42,3 +42,5 @@ The webpage is published at "https://simon-xu-lan.github.io/REACT-Interactive-Vi
 
 - Why does the data file not work?
 - Why API path not work?
+  - The api call issue has been fixed by adding Flask cors
+  - https://flask-cors.readthedocs.io/en/latest/
