@@ -1,6 +1,6 @@
 # Project introduction
 
-This project React, Plotly.js, Bootstrap to build a dashborad webpage
+This project use React, Plotly.js, Bootstrap to build a interactive dashborad webpage
 The webpage is published at "https://simon-xu-lan.github.io/REACT-Interactive-Visualization-and-Dashboards/"
 
 <img src="images/webpage.png" width="1000" alt="webpage"/>
